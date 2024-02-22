@@ -1,32 +1,29 @@
-main {
+main{
     background-color: white;
     width: 100%;
     height: auto;
 }
 
 
-.cabecera {
+.cabecera{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
     width: auto;
-    height: 10%;
+    height: 15%;    
 }
-
-.cabecera h1 {
+.cabecera h1{
     font-size: 3em;
     margin-top: 2em;
-    font-family: 'Open Sans', sans-serif;
 }
 
-.cabecera h2 {
+.cabecera h2{
     margin-bottom: 2em;
-    font-family: 'Open Sans', sans-serif;
 }
 
 /*Engloba el formulario y las newslatter*/
-.contacto {
+.contacto{ 
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -37,7 +34,7 @@ main {
     margin-bottom: 3em;
 }
 
-.contactForm {
+.contactForm{
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -45,50 +42,38 @@ main {
     width: auto;
 }
 
-span {
+span{
     color: red;
     font-size: 12px;
 }
 
-.contactForm label {
+.contactForm label{
     font-weight: bold;
     margin-top: 1em;
 }
 
-.inp {
-    height: 3em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    box-shadow: 5px 5px 2px rgb(0, 0, 0, 0.2);
+.inp{
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.4);
+    border: 1px solid black ;
 }
 
-.contactForm textarea {
-    margin-bottom: 1em;
-    box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.2);
-
-}
-
-#enviar {
-    /*boton enviar formulario */
-    margin-top: 1em;
+#enviar{ /*boton enviar formulario */
+    margin-top:1em ;
     margin-right: 1em;
     padding: 1em;
-    width: 15em;
+    width:15em;
     border: solid 2px black;
     font-size: 1em;
     font-weight: bold;
     background-color: black;
     color: white;
 }
-
-a,
-a:visited {
-    text-decoration: none;
+a, a:visited{text-decoration: none; 
     color: black;
-    margin-left: 3px;
+    margin-left:3px ;
 }
 
-.newsLetter {
+.newsLetter{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -96,58 +81,74 @@ a:visited {
     text-align: center;
     width: 40%;
 }
-
-.newsLetter h2 {
+.newsLetter h2{
     font-weight: 900;
     font-size: 2em;
     margin: 4em;
-    font-family: 'Open Sans', sans-serif;
 }
-
-.newsLetter h3 {
+.newsLetter h3{
     margin-bottom: 2em;
-    font-family: 'Open Sans', sans-serif;
 }
 
-.newsLetter p {
+.newsLetter p{
     width: 100%;
 }
 
-#inpsuscribirse {
-    width: 70%;
-    height: 3em;
-    box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.2);
+.susNovedades{
+    animation-name: novedades;
+    animation-duration: 5s;
 }
 
-#btnsuscriberse {
+
+#inpsuscribirse{
+    width: 70%;
+    height: 3em;
+    box-shadow: 1px 1px 1px rgb(0,0,0,0.2);
+}
+#btnsuscriberse{
     width: 20%;
     height: 3em;
     background-color: black;
     color: white;
     border: none;
+    animation-name: botonSuscribirse;
+    animation-duration: 7s;
+    animation-iteration-count:infinite;
+    transition-timing-function: ease;
+}
+/*Creación de animación para el boton de suscribirse*/
+@keyframes botonSuscribirse {
+    0%   {background-color: black;}
+    25%  {background-color:rgba(255, 0, 0, 0.6);}
+    50%  {background-color: black;}
+    100% {background-color:rgba(255, 0, 0, 0.6);}
 }
 
-#pdatos {
+@keyframes novedades{
+    from{
+        margin-left: 15%;
+    }
+    to{
+        margin-right: 0%;
+    }
+}
+
+
+#pdatos{
     text-align: left;
-    margin-left: 39px;
-    margin-right: 5px;
-    margin-top: 1em;
-}
-
-#pdatos input {
     margin-right: 5px;
 }
 
-h1,h2,h3{ font-family: 'Open Sans', sans-serif;}
-
+#pdatos input{
+    margin-right: 5px;
+}
 /******Direccion de la bodega con los mapas de google******/
 
-.separador {
+.separador{
     border: solid 1px #0f0f0f;
-
+    
 }
-
-.direccion {
+.direccion{
     margin-top: 2em;
     display: flex;
     flex-direction: row;
@@ -157,95 +158,12 @@ h1,h2,h3{ font-family: 'Open Sans', sans-serif;}
     height: 35%;
 }
 
-.dir {
+.dir{
     line-height: 2em;
 }
-
-.dir p {
+.dir p{
     font-size: 1em;
 }
-
-h5 {
-    text-align: center;
+h5{
+   text-align: center;
 }
-
-
-
-/***************Responsive**************************/
-
-/*@media screen and (max-width: 1080px) {}* No necesario auto responsive*/
-
-
-@media screen and (max-width: 430px) {
-
-
-    .cabecera h1 {
-        margin-top: 0.5em;
-        font-size: 2.5em;
-    }
-
-    .cabecera h2 {
-        font-size: 1em;
-    }
-
-    .contactForm{
-        width: 100%;
-        height: auto;
-    }
-    .inp {
-        width: 95%;
-        align-self: center;
-    }
-
-    .contactForm label {
-        align-self: flex-start;
-
-    }
-
-    .newsLetter{
-        width: 100%;
-        height: auto;
-        justify-content: center;
-        align-content: center;
-    }
-
-    #enviarP{
-        width: 95%;
-        height: auto;
-    }
-
-    #enviar {
-        width: 30%;
-        font-size: 1em;
-        padding: 0.5em;
-        margin-bottom: 0.5em;
-    }
-
-    .newsLetter h2 {
-        font-size: 1.25em;
-        margin-bottom: 1em;
-    }
-      
-    .newsLetter h3 {
-     font-size: 0.7em;
-     text-align: center;  
-    }
-
- #inpsuscriberseP{
-    width: 100%;
-    height: auto;
-    align-self: center;
-
- }
-    #pdatos span{
-        width: 100%;
-       font-size: 0.6em;
-    }
-    iframe {
-    
-        width: 95%;
-        height: auto;
-    }
-   
-}
-

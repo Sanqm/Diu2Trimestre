@@ -16,52 +16,67 @@ main {
 }
 
 .imgPantalla img {
-  height: 80vh;
-  width: 35em;
+  height: 90vh;
+  width: 600px;
 }
 
 
 /***************secciones************************/
 
-.historia {
+.historia{
   background-color: white;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  height: max-content;
+ height: max-content;
 }
 
-.panel {
+.panel{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  height: auto;
+ height: auto;
 }
 
-.imgs {
+.videos{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 50%;
-  height: auto;
+ height: auto;
 }
-
-.imgPanel {
+.vpanel{
   margin-top: 2em;
   margin-bottom: 2em;
   width: 90%;
-  height: 400px;
-  object-fit: contain;
-  /* o "cover" contain se adapta merjor al responsive */
+  height:400px;
+  object-fit: cover; /* o "contain"  */
   justify-self: center;
-
 }
 
-.txthistoria {
+.imgs{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 50%;
+ height: auto;
+}
+
+.imgPanel{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  width: 90%;
+  height:400px;
+  object-fit: cover; /* o "contain"  */
+  justify-self: center;
+  
+}
+
+.txthistoria{
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -79,81 +94,27 @@ main {
   margin-right: 2em;
   font-size: 20px;
 }
-
-.poculto,
-.pocultoB {
+.poculto, .pocultoB{
   display: none;
   max-height: max-content;
 }
 
-.txthistoria h2 {
+.txthistoria h2{
   margin-top: 2em;
   margin-bottom: 2em;
   font-size: 2em;
   font-family: 'Open Sans', sans-serif;
 }
 
-.btnmostrar {
+.btnmostrar{
   margin-top: 2em;
   margin-bottom: 2em;
   padding: 1em;
   width: 30%;
   font-size: 20px;
-  color: white;
+  color:white;
   background-color: black;
   border: solid 2px black;
   cursor: pointer;
-
+ 
 }
-
-
-/********************Responsive******************/
-
- @media screen and (max-width: 1080px) {
-
-  .imgPantalla img {
-    height: 60vh;
-    width: 300px;
-  }
-  
-  .panel {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-  
-
-} 
-
-
-@media screen and (max-width: 430px) {
-
-
-  .imgPantalla img {
-    height:60vh;
-    width: 25em;
-  }
-  
-  .imgPanel{
-    height: 10em;
-    width: auto;
-  }
-
-  .txthistoria h2 {
-    font-size: 1em; 
-    text-align: center;
-  }
-
-   .txthistoria p{
-    font-size: 0.65em;
-
-   } 
-  .btnmostrar {
-    font-size: 10px;
-  }
-
-} 
-
-
